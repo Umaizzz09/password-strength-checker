@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+/* Glass card */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+/* Toggle */
+.toggle {
+    cursor: pointer;
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Strength bar */
+.strength-bar {
+    height: 10px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#strength-fill {
+    height: 100%;
+    width: 0%;
+    transition: 0.4s;
+}
+
+#strength-text {
+    font-weight: bold;
+}
+
+#strength-percent {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Checklist */
+#checklist {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+#checklist li {
+    list-style: none;
+    margin: 3px 0;
+}
+
+.valid {
+    color: #00ff9f;
+    font-weight: bold;
+}
+
+.invalid {
+    color: #ff4d4d;
+}
+
+/* Warning */
+.warning {
+    color: #ff4d4d;
+    font-size: 13px;
+}
+
+/* Suggestion */
+#suggestion {
+    font-size: 13px;
+    color: #ddd;
+    margin-top: 10px;
+}
